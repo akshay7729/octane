@@ -1,1 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap');
 
+
+$roboto: 'Roboto', sans-serif;
+$lobster: 'Bebas Neue', cursive;
+$black: #000000;
+
+
+body{
+  margin: 0px !important;
+  padding: 0px !important;
+  font-family: $roboto !important;
+}
+.logo{
+  font-family: $lobster;
+  font-size: 35px;
+  letter-spacing: 2px;
+}
+.navbar-light{
+  .navbar-nav{
+    .nav-link{
+      color: $black;
+      letter-spacing: 0.8px;
+    }
+  }
+}

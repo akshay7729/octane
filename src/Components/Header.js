@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUser, faHeart, faSearch, faHome } from '@fortawesome/free-solid-svg-icons'
 import {
   Collapse,
   Navbar,
@@ -7,11 +9,7 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem
+  NavLink
 } from 'reactstrap';
 
 const Header = (props) => {
@@ -21,34 +19,36 @@ const Header = (props) => {
 
   return (
     <div>
-      <Navbar color="light" light expand="md">
-        <NavbarBrand href="/" className="text-uppercase">octane jump</NavbarBrand>
+      <Navbar light expand="md" className="text-uppercase">
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
-          <Nav className="mr-auto" navbar>
+          <Nav className="mr-auto w-100" navbar>
             <NavItem>
-              <NavLink href="/components/">Components</NavLink>
+              <NavLink href="/"><FontAwesomeIcon icon={faHome} /> Home</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
+              <NavLink href="/">Phones</NavLink>
             </NavItem>
-            <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
-                Options
-              </DropdownToggle>
-              <DropdownMenu right>
-                <DropdownItem>
-                  Option 1
-                </DropdownItem>
-                <DropdownItem>
-                  Option 2
-                </DropdownItem>
-                <DropdownItem divider />
-                <DropdownItem>
-                  Reset
-                </DropdownItem>
-              </DropdownMenu>
-            </UncontrolledDropdown>
+            <NavItem>
+              <NavLink href="/">Macbooks</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/">Ipad</NavLink>
+            </NavItem>
+          </Nav>
+
+          <NavbarBrand href="/" className="text-uppercase mr-auto logo">octane jump</NavbarBrand>
+
+          <Nav navbar className="w-100 flex-row-reverse">
+            <NavItem>
+              <NavLink href="/"><FontAwesomeIcon icon={faUser} /></NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/"><FontAwesomeIcon icon={faHeart} /></NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/"><FontAwesomeIcon icon={faSearch} /></NavLink>
+            </NavItem>
           </Nav>
         </Collapse>
       </Navbar>
