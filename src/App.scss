@@ -5,6 +5,54 @@
 $roboto: 'Roboto', sans-serif;
 $lobster: 'Bebas Neue', cursive;
 $black: #000000;
+$colors: (
+  oRed: #ff628c,
+  oBlack: #000000,
+  oWhite: #fff,
+  oLightGrey: rgba(0,0,0,0.6),
+  oLightBlue: #f4f7fa
+);
+
+// icon bubbles
+.icon-bubbles{
+  font-size: 11px;
+  font-weight: bold;
+  color: #000;
+  padding-top: 2px;
+  border-radius: 50%;
+  padding-left: 1px;
+  width: 19px;
+  height: 19px;
+  background: orange;
+  position: absolute;
+  margin-left: 8px;
+  margin-top: -8px;
+}
+
+//search box
+.searchBox{
+  .searchLogo{
+    margin-top: 7px;
+    margin-left: 12px;
+    color: map-get($colors, oLightGrey);
+    margin-right: -30px;
+    position: relative;
+    svg{
+      font-size: 1rem;
+    }
+  }
+  .mainSearch{
+    background:map-get($colors, oLightBlue);
+    width: 70%;
+    border-radius: 1rem;
+    padding-left: 2.5rem;
+    letter-spacing: 1px;
+    font-size: 14px;
+    &:focus{
+      box-shadow: none;
+    }
+  }
+}
 
 
 body{
@@ -22,6 +70,9 @@ body{
     .nav-link{
       color: $black;
       letter-spacing: 0.8px;
+      .nav-right-icon-desc{
+        font-size: 12px;
+      }
     }
   }
 }
