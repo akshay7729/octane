@@ -1,0 +1,9 @@
+@import "./Fonts.scss";
+@import "./Colors.scss";
+body{
+  margin: 0px !important;
+  padding: 0px !important;
+  font-family: $roboto !important;
+}
+@import "./Header.scss";
+@import "./Footer.scss";
