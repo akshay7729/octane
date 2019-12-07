@@ -1,0 +1,18 @@
+body{
+    margin: 0px !important;
+    padding: 0px !important;
+    font-family: $roboto !important;
+}
+ul{
+    list-style: none;
+    padding-left: 0px;
+    margin-bottom: 0;
+}
+a{
+    text-decoration: none;
+    color: map-get($colors, oBlack);
+    &:hover{
+        text-decoration: none;
+        color: rgba(0, 0, 0, 0.7);
+    }
+}

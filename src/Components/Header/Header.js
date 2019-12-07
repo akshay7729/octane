@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser, faHeart, faSearch, faShoppingBag } from '@fortawesome/free-solid-svg-icons'
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, Input} from 'reactstrap';
+import MegaMenu from './MegaMenu'
 
 const Header = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,7 +12,7 @@ const Header = (props) => {
 
   return (
     <div>
-      <Navbar light expand="md" className="text-uppercase pt-0">
+      <Navbar light expand="md" className="text-uppercase pt-0 pb-0">
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <NavbarBrand href="/" className="text-uppercase mr-auto logo pt-2">octane tech</NavbarBrand>
@@ -52,6 +53,7 @@ const Header = (props) => {
           </Nav>
         </Collapse>
       </Navbar>
+      <MegaMenu />
     </div>
   );
 }

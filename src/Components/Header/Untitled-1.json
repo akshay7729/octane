@@ -1,0 +1,529 @@
+[
+    {
+        "name": "iPhones",
+        "url": "/",
+        "level2": [
+            {
+                "id": 1,
+                "title": "New Deals",
+                "type": "list",
+                "url": "/",
+                "content": [
+                    {
+                        "id":1,
+                        "name": "iPhone 11 Pro",
+                        "url": "/"
+                    },
+                    {
+                        "id":2,
+                        "name": "iPhone 11",
+                        "url": "/"
+                    },
+                    {
+                        "id":3,
+                        "name": "iPhone XS",
+                        "url": "/"
+                    },
+                    {
+                        "id":4,
+                        "name": "iPhone XR",
+                        "url": "/"
+                    },
+                    {
+                        "id":4,
+                        "name": "iPhone X",
+                        "url": "/"
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "title": "Exchange Offer",
+                "type": "list",
+                "url": "/",
+                "content": [
+                    {
+                        "id":1,
+                        "name": "iPhone 6 Exchange",
+                        "url": "/"
+                    },
+                    {
+                        "id":2,
+                        "name": "iPhone 6s Exchange",
+                        "url": "/"
+                    },
+                    {
+                        "id":3,
+                        "name": "iPhone 7 Exchange",
+                        "url": "/"
+                    }
+                ]
+            },
+            {
+                "id": 3,
+                "title": "Accessories",
+                "type": "list",
+                "url": "/",
+                "content": [
+                    {
+                        "id":1,
+                        "name": "iPhone XS Cases",
+                        "url": "/"
+                    },
+                    {
+                        "id":2,
+                        "name": "iPhone XR Cases",
+                        "url": "/"
+                    },
+                    {
+                        "id":3,
+                        "name": "iPhone 8 Cases",
+                        "url": "/"
+                    }
+                ]
+            },
+            {
+                "id": 4,
+                "title": "Promo",
+                "type": "banner",
+                "url": "/",
+                "content": [
+                    {
+                        "id":1,
+                        "name": "iPhones",
+                        "url": "/",
+                        "imageUrl": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Android Smartphones",
+        "url": "/",
+        "level2": [
+            {
+                "id": 1,
+                "title": "Trending",
+                "type": "list",
+                "url": "/",
+                "content": [
+                    {
+                        "id":1,
+                        "name": "iPhone 11 Pro",
+                        "url": "/"
+                    },
+                    {
+                        "id":2,
+                        "name": "iPhone 11",
+                        "url": "/"
+                    },
+                    {
+                        "id":3,
+                        "name": "iPhone XS",
+                        "url": "/"
+                    },
+                    {
+                        "id":4,
+                        "name": "iPhone XR",
+                        "url": "/"
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "title": "Exchange Offer",
+                "type": "list",
+                "url": "/",
+                "content": [
+                    {
+                        "id":1,
+                        "name": "iPhones",
+                        "url": "/"
+                    }
+                ]
+            },
+            {
+                "id": 3,
+                "title": "Accessories",
+                "type": "list",
+                "url": "/",
+                "content": [
+                    {
+                        "id":1,
+                        "name": "iPhones",
+                        "url": "/"
+                    }
+                ]
+            },
+            {
+                "id": 4,
+                "title": "Promo",
+                "type": "banner",
+                "url": "/",
+                "content": [
+                    {
+                        "id":1,
+                        "name": "iPhones",
+                        "url": "/",
+                        "imageUrl": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Macbooks",
+        "url": "/",
+        "level2": [
+            {
+                "id": 1,
+                "title": "New Deals",
+                "type": "list",
+                "url": "/",
+                "content": [
+                    {
+                        "id":1,
+                        "name": "iPhones",
+                        "url": "/"
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "title": "Exchange Offer",
+                "type": "list",
+                "url": "/",
+                "content": [
+                    {
+                        "id":1,
+                        "name": "iPhones",
+                        "url": "/"
+                    }
+                ]
+            },
+            {
+                "id": 3,
+                "title": "Accessories",
+                "type": "list",
+                "url": "/",
+                "content": [
+                    {
+                        "id":1,
+                        "name": "iPhones",
+                        "url": "/"
+                    }
+                ]
+            },
+            {
+                "id": 4,
+                "title": "Promo",
+                "type": "banner",
+                "url": "/",
+                "content": [
+                    {
+                        "id":1,
+                        "name": "iPhones",
+                        "url": "/",
+                        "imageUrl": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Laptops",
+        "url": "/",
+        "level2": [
+            {
+                "id": 1,
+                "title": "New Deals",
+                "type": "list",
+                "url": "/",
+                "content": [
+                    {
+                        "id":1,
+                        "name": "iPhones",
+                        "url": "/"
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "title": "Exchange Offer",
+                "type": "list",
+                "url": "/",
+                "content": [
+                    {
+                        "id":1,
+                        "name": "iPhones",
+                        "url": "/"
+                    }
+                ]
+            },
+            {
+                "id": 3,
+                "title": "Accessories",
+                "type": "list",
+                "url": "/",
+                "content": [
+                    {
+                        "id":1,
+                        "name": "iPhones",
+                        "url": "/"
+                    }
+                ]
+            },
+            {
+                "id": 4,
+                "title": "Promo",
+                "type": "banner",
+                "url": "/",
+                "content": [
+                    {
+                        "id":1,
+                        "name": "iPhones",
+                        "url": "/",
+                        "imageUrl": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "iPads",
+        "url": "/",
+        "level2": [
+            {
+                "id": 1,
+                "title": "New Deals",
+                "type": "list",
+                "url": "/",
+                "content": [
+                    {
+                        "id":1,
+                        "name": "iPhones",
+                        "url": "/"
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "title": "Exchange Offer",
+                "type": "list",
+                "url": "/",
+                "content": [
+                    {
+                        "id":1,
+                        "name": "iPhones",
+                        "url": "/"
+                    }
+                ]
+            },
+            {
+                "id": 3,
+                "title": "Accessories",
+                "type": "list",
+                "url": "/",
+                "content": [
+                    {
+                        "id":1,
+                        "name": "iPhones",
+                        "url": "/"
+                    }
+                ]
+            },
+            {
+                "id": 4,
+                "title": "Promo",
+                "type": "banner",
+                "url": "/",
+                "content": [
+                    {
+                        "id":1,
+                        "name": "iPhones",
+                        "url": "/",
+                        "imageUrl": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Tablets",
+        "url": "/",
+        "level2": [
+            {
+                "id": 1,
+                "title": "New Deals",
+                "type": "list",
+                "url": "/",
+                "content": [
+                    {
+                        "id":1,
+                        "name": "iPhones",
+                        "url": "/"
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "title": "Exchange Offer",
+                "type": "list",
+                "url": "/",
+                "content": [
+                    {
+                        "id":1,
+                        "name": "iPhones",
+                        "url": "/"
+                    }
+                ]
+            },
+            {
+                "id": 3,
+                "title": "Accessories",
+                "type": "list",
+                "url": "/",
+                "content": [
+                    {
+                        "id":1,
+                        "name": "iPhones",
+                        "url": "/"
+                    }
+                ]
+            },
+            {
+                "id": 4,
+                "title": "Promo",
+                "type": "banner",
+                "url": "/",
+                "content": [
+                    {
+                        "id":1,
+                        "name": "iPhones",
+                        "url": "/",
+                        "imageUrl": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Apple Watch",
+        "url": "/",
+        "level2": [
+            {
+                "id": 1,
+                "title": "New Deals",
+                "type": "list",
+                "url": "/",
+                "content": [
+                    {
+                        "id":1,
+                        "name": "iPhones",
+                        "url": "/"
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "title": "Exchange Offer",
+                "type": "list",
+                "url": "/",
+                "content": [
+                    {
+                        "id":1,
+                        "name": "iPhones",
+                        "url": "/"
+                    }
+                ]
+            },
+            {
+                "id": 3,
+                "title": "Accessories",
+                "type": "list",
+                "url": "/",
+                "content": [
+                    {
+                        "id":1,
+                        "name": "iPhones",
+                        "url": "/"
+                    }
+                ]
+            },
+            {
+                "id": 4,
+                "title": "Promo",
+                "type": "banner",
+                "url": "/",
+                "content": [
+                    {
+                        "id":1,
+                        "name": "iPhones",
+                        "url": "/",
+                        "imageUrl": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Smart Watches",
+        "url": "/",
+        "level2": [
+            {
+                "id": 1,
+                "title": "New Deals",
+                "type": "list",
+                "url": "/",
+                "content": [
+                    {
+                        "id":1,
+                        "name": "iPhones",
+                        "url": "/"
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "title": "Exchange Offer",
+                "type": "list",
+                "url": "/",
+                "content": [
+                    {
+                        "id":1,
+                        "name": "iPhones",
+                        "url": "/"
+                    }
+                ]
+            },
+            {
+                "id": 3,
+                "title": "Accessories",
+                "type": "list",
+                "url": "/",
+                "content": [
+                    {
+                        "id":1,
+                        "name": "iPhones",
+                        "url": "/"
+                    }
+                ]
+            },
+            {
+                "id": 4,
+                "title": "Promo",
+                "type": "banner",
+                "url": "/",
+                "content": [
+                    {
+                        "id":1,
+                        "name": "iPhones",
+                        "url": "/",
+                        "imageUrl": ""
+                    }
+                ]
+            }
+        ]
+    }
+]
