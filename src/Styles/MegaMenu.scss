@@ -28,7 +28,7 @@
                 left: 0;
                 right: 0;
                 background : map-get($colors, oWhite);
-                z-index: 1;
+                z-index: 100;
                 letter-spacing: 0.8px;
                 padding: 20px;
                 .level-2-content{
