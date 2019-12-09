@@ -3,7 +3,8 @@ import 'bootstrap/dist/css/bootstrap.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser, faHeart, faSearch, faShoppingBag } from '@fortawesome/free-solid-svg-icons'
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, Input} from 'reactstrap';
-import MegaMenu from './MegaMenu'
+import MegaMenu from './MegaMenu';
+import {Link} from 'react-router-dom'
 
 const Header = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,7 +16,9 @@ const Header = (props) => {
       <Navbar light expand="md" className="text-uppercase pt-0 pb-0">
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
-          <NavbarBrand href="/" className="text-uppercase mr-auto logo pt-2">octane tech</NavbarBrand>
+          <NavbarBrand href="/" className="text-uppercase mr-auto logo pt-2">
+            <Link to="/">octane tech</Link>
+          </NavbarBrand>
           <NavItem className="searchBox d-flex justify-content-center pr-3 mr-auto w-100 text-center">
             <span className="searchLogo"><FontAwesomeIcon icon={faSearch} /></span>
             <Input 

@@ -36,14 +36,14 @@ const MegaMenu = (props) => {
                                         return(
                                             <li className="level-2-list" key={index}>
                                                 <a className="level-2-link text-uppercase font-weight-bold" href="#">{subMenu.title}</a>
-                                                <div class="dash"></div>
+                                                <div className="dash"></div>
                                                 {
                                                     subMenu.type === 'list' ?
                                                     <ul className="level-2-content">
                                                         {
                                                             subMenu.content && subMenu.content.map((con,index) => {
                                                                 return(
-                                                                    <li class="pb-2" key={index}>
+                                                                    <li className="pb-2" key={index}>
                                                                         <a href="/">{con.name}</a>
                                                                     </li>
                                                                 )
