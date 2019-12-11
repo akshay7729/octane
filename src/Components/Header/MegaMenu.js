@@ -54,7 +54,7 @@ const MegaMenu = (props) => {
                                                             })
                                                         }
                                                     </ul> :
-                                                    <a href="/">
+                                                    <Link to="/">
                                                         <Card>
                                                             <CardImg top width="100%" src="/assets/iphone.jpg" alt="Card image cap" />
                                                             <CardBody>
@@ -65,7 +65,7 @@ const MegaMenu = (props) => {
                                                             </CardText>
                                                             </CardBody>
                                                         </Card>
-                                                    </a>
+                                                    </Link>
                                                 }
                                             </li>
                                         )
