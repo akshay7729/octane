@@ -1,0 +1,19 @@
+.plp-prod{
+    color: map-get($colors, oBlack);
+    .card{
+        margin-bottom: 20px;
+        .card-title{
+            font-weight: 500;
+            letter-spacing: 0.7px;
+            font-size: 20px;
+            text-overflow: ellipsis;
+        }
+        .card-subtitle{
+            font-size: 25px;
+            letter-spacing: 1px;
+        }
+    }
+}
+.plp-prod-img{
+    height: 373px;
+}

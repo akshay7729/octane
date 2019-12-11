@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import Axios from 'axios';
 import { Card, CardBody, CardTitle, CardText, CardImg } from 'reactstrap';
+import {Link} from 'react-router-dom'
 
 const MegaMenu = (props) => {
 
@@ -28,7 +29,10 @@ const MegaMenu = (props) => {
                     {megaMenuState.map((menu,index) => {
                         return (
                             <li className="level-1-list" key={index}>
-                                <a className="level-1-link" href={menu.url}>{menu.name}</a>
+                                <Link 
+                                    className="level-1-link"
+                                    to={menu.url}
+                                >{menu.name}</Link>
                                 <div className="backdrop"></div>
                                 <ul className="level-2 container">
                                 {

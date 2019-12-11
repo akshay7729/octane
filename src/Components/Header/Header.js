@@ -16,9 +16,7 @@ const Header = (props) => {
       <Navbar light expand="md" className="text-uppercase pt-0 pb-0">
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
-          <NavbarBrand href="/" className="text-uppercase mr-auto logo pt-2">
-            <Link to="/">octane tech</Link>
-          </NavbarBrand>
+        <Link to="/"><div className="text-uppercase mr-auto logo pt-2 navbar-brand">octane tech</div></Link>
           <NavItem className="searchBox d-flex justify-content-center pr-3 mr-auto w-100 text-center">
             <span className="searchLogo"><FontAwesomeIcon icon={faSearch} /></span>
             <Input 
