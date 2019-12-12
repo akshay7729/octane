@@ -39,9 +39,20 @@
         .price-old{
             color: #646464;
         }
+        .price-new{
+            font-weight: 700;
+        }
         .price-oldPrice{
             text-decoration: line-through;
         }
+        h6{
+            padding-top: 10px;
+            font-size: 14px;
+        }
+    }
+    .prod-reviews{
+        padding-top: 30px;
+        letter-spacing: 1px;
     }
 }
 .prod-image{
@@ -49,5 +60,15 @@
     padding-left: 15px;
     .plp-prod-img{
         min-height: 373px;
+    }
+}
+.sort{
+    font-size: 14px;
+    .sort-opt{
+        cursor: pointer;
+        transition: all 0.3s ease;
+        &:hover{
+            font-weight: 700;
+        }
     }
 }
