@@ -12,13 +12,11 @@ const MegaMenu = (props) => {
     useEffect(() => {
         Axios.get('http://demo4999203.mockable.io/octane/mega-menu')
         .then(res => {
-            console.log('res',res);
             setMegaManuState(res.data);
             setLoad(true);
         })
         .catch(err => {
             setError(err.message);
-            console.log('error', error)
         })
     },[]);
 

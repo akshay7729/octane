@@ -2,19 +2,22 @@ import React, {useEffect, useState} from 'react'
 import {Link} from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faRupeeSign, faCircle, faStar } from '@fortawesome/free-solid-svg-icons'
-import { Card, CardImg, CardBody, CardTitle, CardSubtitle, Col, Row } from 'reactstrap';
+import { Card, CardImg, CardBody, CardTitle, Col, Row} from 'reactstrap';
 import axios from 'axios'
 import Sort from './sort'
+import Filter from './filter'
 
-const PLP = () => {
-
+const PLP = (props) => {
     const [plpState, setPlpState] = useState([]);
     const [orgPlpState, setOrgPlpState] = useState([]);
     const [load, setLoad] = useState(false);
-    const [geterror, setError] = useState('');
+    const [geterrorState, setErrorState] = useState('');
+    const [colorFilterState, setColorFilterState] = useState([]);
+    const [filtersState, setFiltersState] = useState([]);
+    const [filtersLoaded, setFiltersLoaded] = useState(false);
 
     useEffect(() => {
-        axios.get('https://demo4999203.mockable.io/products-list')
+        axios.post('https://demo4999203.mockable.io/products-list')
         .then(response => {
             setPlpState(response.data);
             setOrgPlpState(response.data);
@@ -22,8 +25,18 @@ const PLP = () => {
             console.log('response', response.data);
         })
         .catch(error => {
-            setError(error.message);
-            console.log('error', geterror);
+            setErrorState(error.message);
+            console.log('getError', geterrorState);
+        });
+
+        //filters
+        axios.get('http://demo4999203.mockable.io/filters')
+        .then(response => {
+            setFiltersState(response.data);
+            setFiltersLoaded(true);
+        })
+        .catch(error => {
+            console.log('filters error', error);
         })
     },[]);
 
@@ -45,12 +58,54 @@ const PLP = () => {
         setPlpState(orgPlpState);
     }
 
+    // color filters
+    const handleColorFilter = (event) => {
+        if(event.type === 'change'){
+            if(event.target.type === "checkbox"){
+                if(event.target.checked){
+                    const getCurrentFilters = [...colorFilterState, event.target.value.toLowerCase()];
+                    setColorFilterState(getCurrentFilters);
+                    const filterList = orgPlpState.filter(plp => {
+                        return plp && getCurrentFilters.includes(plp.color)
+                    });
+                    setPlpState(filterList);
+                }else{
+                    const filtersSplice = [...colorFilterState];
+                    const orgState = [...orgPlpState]
+                    filtersSplice.splice(filtersSplice.indexOf(event.target.value),1);
+                    setColorFilterState(filtersSplice);
+                    const filterList = orgPlpState.filter(plp => {
+                        return plp && filtersSplice.includes(plp.color)
+                    });
+                    const finalList = filtersSplice.length ? filterList : orgState
+                    setPlpState(finalList);
+                }
+            }
+        }
+    }
+
     if(load){
         return (
             <div className="container-fluid pt-3">
                 <Col xs="12">
                 <Row>
-                    <Col md="3">asdasd</Col>
+                    <Col md="3">
+                        <div className="checkboxes">
+                            {
+                                filtersLoaded && 
+                                <React.Fragment>
+                                    <div>
+                                        <div className="fulter-label">Filter by Color</div>
+                                        <Filter 
+                                            filterArray={filtersState.color} 
+                                            check={handleColorFilter}
+                                            type='color'
+                                        />
+                                    </div>
+                                </React.Fragment>
+                            }
+                        </div>
+                    </Col>
                     <Col md="9">
                         <Sort 
                             rel = {handleRelevance}
@@ -60,7 +115,11 @@ const PLP = () => {
                         {
                             plpState.map((product,index) => {
                                 return(
-                                    <Link to="/" className="plp-prod" key={index}>
+                                    <Link 
+                                        to={props.match.params.id + '/' + product.id} 
+                                        className="plp-prod" 
+                                        key={index}
+                                    >
                                     <Card>
                                         <Row>
                                         <div className="d-flex w-100">

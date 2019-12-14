@@ -72,3 +72,38 @@
         }
     }
 }
+
+// checboxes
+.checkboxes{
+    padding-top: 5px;
+    .filter-form{
+        padding-left: 25px;
+    }
+    .fulter-label{
+        padding-bottom: 20px;
+    }
+}
+.checkboxLabel{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    margin-left: -25px;
+    background: #ddd;
+    cursor: pointer;
+    .checked{
+        margin-left: 4px;
+        font-size: 12px;
+        position: absolute;
+        margin-top: 1px;
+        visibility: hidden;
+    }
+}
+.filters-checkbox{
+    opacity: 0;
+    cursor: pointer;
+}
+.filters-checkbox:checked + .checkboxLabel{
+    .checked{
+        visibility: visible;
+    }
+}
