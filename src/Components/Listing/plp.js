@@ -6,6 +6,7 @@ import { Card, CardImg, CardBody, CardTitle, Col, Row} from 'reactstrap';
 import axios from 'axios'
 import Sort from './sort'
 import Filter from './filter'
+import PriceRange from './priceRange'
 
 const PLP = (props) => {
     const [plpState, setPlpState] = useState([]);
@@ -15,6 +16,9 @@ const PLP = (props) => {
     const [colorFilterState, setColorFilterState] = useState([]);
     const [filtersState, setFiltersState] = useState([]);
     const [filtersLoaded, setFiltersLoaded] = useState(false);
+    const [rangeSliderState, setRangeSliderState] = useState({min: 0, max:100})
+    const [rangeSliderMinVal, setRangeSliderMinVal] = useState(0);
+    const [rangeSliderMaxVal, setRangeSliderMaxVal] = useState(100);
 
     useEffect(() => {
         axios.post('https://demo4999203.mockable.io/products-list')
@@ -56,6 +60,14 @@ const PLP = (props) => {
 
     const handleRelevance = () => {
         setPlpState(orgPlpState);
+    }
+
+    const handlePriceMinRange = event => {
+        setRangeSliderMinVal(event.target.value);
+    }
+
+    const handlePriceMaxRange = event => {
+        setRangeSliderMaxVal(event.target.value);
     }
 
     // color filters
@@ -101,6 +113,26 @@ const PLP = (props) => {
                                             check={handleColorFilter}
                                             type='color'
                                         />
+                                    </div>
+                                    <div>
+                                        <div className="filter-label">Filter By Price</div>
+                                        <div className="slider">
+                                            <PriceRange 
+                                               value={rangeSliderMinVal}
+                                               type="Min"
+                                               handlePrice={handlePriceMinRange}
+                                               min="0"
+                                               max={rangeSliderMaxVal}
+                                            />
+
+                                            <PriceRange 
+                                               value={rangeSliderMaxVal}
+                                               type="Max"
+                                               handlePrice={handlePriceMaxRange}
+                                               min={rangeSliderMinVal}
+                                               max="100"
+                                            />
+                                        </div>
                                     </div>
                                 </React.Fragment>
                             }
