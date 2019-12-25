@@ -16,9 +16,8 @@ const PLP = (props) => {
     const [colorFilterState, setColorFilterState] = useState([]);
     const [filtersState, setFiltersState] = useState([]);
     const [filtersLoaded, setFiltersLoaded] = useState(false);
-    const [rangeSliderState, setRangeSliderState] = useState({min: 0, max:100})
-    const [rangeSliderMinVal, setRangeSliderMinVal] = useState(0);
-    const [rangeSliderMaxVal, setRangeSliderMaxVal] = useState(100);
+    const [rangeSliderMinVal, setRangeSliderMinVal] = useState(20000);
+    const [rangeSliderMaxVal, setRangeSliderMaxVal] = useState(50000);
 
     useEffect(() => {
         axios.post('https://demo4999203.mockable.io/products-list')
@@ -121,7 +120,7 @@ const PLP = (props) => {
                                                value={rangeSliderMinVal}
                                                type="Min"
                                                handlePrice={handlePriceMinRange}
-                                               min="0"
+                                               min="20000"
                                                max={rangeSliderMaxVal}
                                             />
 
@@ -130,7 +129,7 @@ const PLP = (props) => {
                                                type="Max"
                                                handlePrice={handlePriceMaxRange}
                                                min={rangeSliderMinVal}
-                                               max="100"
+                                               max="50000"
                                             />
                                         </div>
                                     </div>

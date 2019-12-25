@@ -1,15 +1,22 @@
 import React from 'react';
 import Main from './Components/Main';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux'
+import reducer from './Store/reducer';
 import './Styles/App.scss';
-import {BrowserRouter} from 'react-router-dom'
+import {BrowserRouter} from 'react-router-dom';
 
-function App() {
+const store = createStore(reducer);
+
+const App = () => {
   return (
-    <BrowserRouter>
-    <div className="App">
-      <Main />
-    </div>
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+      <div className="App">
+        <Main />
+      </div>
+      </BrowserRouter>
+    </Provider>
   );
 }
 

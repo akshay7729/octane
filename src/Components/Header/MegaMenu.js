@@ -1,22 +1,30 @@
 import React, {useState, useEffect} from 'react';
 import Axios from 'axios';
 import { Card, CardBody, CardTitle, CardText, CardImg } from 'reactstrap';
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
 
 const MegaMenu = (props) => {
 
-    const [megaMenuState, setMegaManuState] = useState([]); 
+    const megaMenuStateHook = useSelector(state => state.megaMenu);
+    const megaMenuDispatch = useDispatch();
     const [load, setLoad] = useState(false);
     const [error, setError] = useState('');
-    
+
     useEffect(() => {
         Axios.get('http://demo4999203.mockable.io/octane/mega-menu')
         .then(res => {
-            setMegaManuState(res.data);
             setLoad(true);
+            megaMenuDispatch(
+                {
+                    type : 'ON_MEGA_NAV_LOAD',
+                    payload: res.data 
+                }
+            );
         })
         .catch(err => {
             setError(err.message);
+            console.log('mega menu error',error);
         })
     },[]);
 
@@ -24,7 +32,7 @@ const MegaMenu = (props) => {
         return (
             <div className="mega-menu">
                 <ul className="level-1 d-flex justify-content-center">
-                    {megaMenuState.map((menu,index) => {
+                    {megaMenuStateHook.map((menu,index) => {
                         return (
                             <li className="level-1-list" key={index}>
                                 <Link 
@@ -83,4 +91,4 @@ const MegaMenu = (props) => {
     }
 }
 
-export default MegaMenu
+export default MegaMenu;
