@@ -8,7 +8,7 @@ const Filter = (props) => {
         <Form className="filter-form">
             <FormGroup>
                 {
-                    props.filterArray.map((col,index) => {
+                    props.filterArray && props.filterArray.map((col,index) => {
                         return(
                             <div key={index}>
                                 <Label check>

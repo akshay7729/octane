@@ -1,12 +1,13 @@
 import React from 'react';
 import Main from './Components/Main';
-import { createStore } from 'redux';
+import { createStore, compose } from 'redux';
 import { Provider } from 'react-redux'
 import reducer from './Store/reducer';
 import './Styles/App.scss';
 import {BrowserRouter} from 'react-router-dom';
 
-const store = createStore(reducer);
+const composeEnhancers = (typeof window !== 'undefined' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) || compose;
+const store = createStore(reducer, composeEnhancers());
 
 const App = () => {
   return (

@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faRupeeSign, faCircle, faStar } from '@fortawesome/free-solid-svg-icons'
 import { Card, CardImg, CardBody, CardTitle, Col, Row} from 'reactstrap';
+import { useSelector, useDispatch } from 'react-redux';
 import axios from 'axios'
 import Sort from './sort'
 import Filter from './filter'
@@ -14,10 +15,11 @@ const PLP = (props) => {
     const [load, setLoad] = useState(false);
     const [geterrorState, setErrorState] = useState('');
     const [colorFilterState, setColorFilterState] = useState([]);
-    const [filtersState, setFiltersState] = useState([]);
     const [filtersLoaded, setFiltersLoaded] = useState(false);
     const [rangeSliderMinVal, setRangeSliderMinVal] = useState(20000);
     const [rangeSliderMaxVal, setRangeSliderMaxVal] = useState(50000);
+    const reduxFilterState = useSelector(state => state.filters);
+    const dispatchFilter = useDispatch();
 
     useEffect(() => {
         axios.post('https://demo4999203.mockable.io/products-list')
@@ -35,8 +37,11 @@ const PLP = (props) => {
         //filters
         axios.get('http://demo4999203.mockable.io/filters')
         .then(response => {
-            setFiltersState(response.data);
             setFiltersLoaded(true);
+            dispatchFilter({
+                type: 'ON_FILTERS_LOAD',
+                payload: response.data
+            });
         })
         .catch(error => {
             console.log('filters error', error);
@@ -108,7 +113,7 @@ const PLP = (props) => {
                                     <div>
                                         <div className="fulter-label">Filter by Color</div>
                                         <Filter 
-                                            filterArray={filtersState.color} 
+                                            filterArray={reduxFilterState.color} 
                                             check={handleColorFilter}
                                             type='color'
                                         />

@@ -2,14 +2,15 @@
     {
         "id": "apple-watch-1",
         "name": "Apple Watch",
-        "color": "grey",
-        "price": "64999",
+        "color": "black",
+        "price": "34999",
+        "basicDiscount": 10,
         "orderable-qty": "50",
         "ram": "6 GB",
         "storage": "512 GB",
         "sku": [],
         "promotions":[],
-        "size":"6.1 Inch",
+        "size":"35 cm",
         "camera": "12 MP",
         "warrenty": "1 year",
         "processor": "B 13 Bionic Chip",
@@ -18,14 +19,18 @@
         "discount": [],
         "addon": [],
         "pics": [],
+        "primaryImg": "/assets/iphones/4.jpg",
         "offers": [],
-        "version": ""
+        "version": "",
+        "descPoints": ["GPS and Altimeter", "Swimproof", "Voice Based Siri", "3 Activity Rings Tracking - Move, Exercise, Stand", "Smart Coaching", "Activity Sharing and Achievements", "Heart Rate Monitor", "Breathe App", "Notifications", "Touchscreen", "Notifier, Fitness &amp; Outdoor", "1 Year Warranty"]
+    
     },
     {
         "id": "apple-watch-2",
         "name": "Apple Watch",
         "color": "grey",
-        "price": "64999",
+        "price": "34999",
+        "basicDiscount": 15,
         "orderable-qty": "50",
         "ram": "6 GB",
         "storage": "512 GB",
@@ -40,14 +45,17 @@
         "discount": [],
         "addon": [],
         "pics": [],
+        "primaryImg": "/assets/iphones/5.jpg",
         "offers": [],
-        "version": ""
+        "version": "",
+        "descPoints": ["GPS and Altimeter", "Swimproof", "Voice Based Siri", "3 Activity Rings Tracking - Move, Exercise, Stand", "Smart Coaching", "Activity Sharing and Achievements", "Heart Rate Monitor", "Breathe App", "Notifications", "Touchscreen", "Notifier, Fitness &amp; Outdoor", "1 Year Warranty"]
     },
     {
         "id": "apple-watch-3",
         "name": "Apple Watch",
-        "color": "grey",
-        "price": "64999",
+        "color": "white",
+        "price": "32999",
+        "basicDiscount": 20,
         "orderable-qty": "50",
         "ram": "6 GB",
         "storage": "512 GB",
@@ -62,14 +70,17 @@
         "discount": [],
         "addon": [],
         "pics": [],
+        "primaryImg": "/assets/iphones/6.jpg",
         "offers": [],
-        "version": ""
+        "version": "",
+        "descPoints": ["GPS and Altimeter", "Swimproof", "Voice Based Siri", "3 Activity Rings Tracking - Move, Exercise, Stand", "Smart Coaching", "Activity Sharing and Achievements", "Heart Rate Monitor", "Breathe App", "Notifications", "Touchscreen", "Notifier, Fitness &amp; Outdoor", "1 Year Warranty"]
     },
     {
         "id": "apple-watch-4",
         "name": "Apple Watch",
         "color": "grey",
-        "price": "64999",
+        "price": "47999",
+        "basicDiscount": 12,
         "orderable-qty": "50",
         "ram": "6 GB",
         "storage": "512 GB",
@@ -84,7 +95,9 @@
         "discount": [],
         "addon": [],
         "pics": [],
+        "primaryImg": "/assets/iphones/12.jpg",
         "offers": [],
-        "version": ""
+        "version": "",
+        "descPoints": ["GPS and Altimeter", "Swimproof", "Voice Based Siri", "3 Activity Rings Tracking - Move, Exercise, Stand", "Smart Coaching", "Activity Sharing and Achievements", "Heart Rate Monitor", "Breathe App", "Notifications", "Touchscreen", "Notifier, Fitness &amp; Outdoor", "1 Year Warranty"]
     }
 ]

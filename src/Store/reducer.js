@@ -1,5 +1,7 @@
 const initialState = {
-    megaMenu: []
+    megaMenu: [],
+    filters: [],
+    currentPdp: []
 }
 
 const reducer = (state = initialState,action) => {
@@ -8,6 +10,16 @@ const reducer = (state = initialState,action) => {
         return {
             ...state,
             megaMenu: action.payload
+        }
+        case 'ON_FILTERS_LOAD':
+        return {
+            ...state,
+            filters: action.payload
+        }
+        case 'ON_PDP_LOAD':
+        return {
+            ...state,
+            currentPdp: action.payload
         }
         break;
         default : return state;

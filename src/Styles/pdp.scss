@@ -1,0 +1,91 @@
+.pdp{
+    .pdpInner{
+      .pdpInnerData{
+        .pdpPrice{
+          font-size: 1.8rem;
+          .pdpPriceOld{
+            text-decoration: line-through;
+            color:rgba(0,0,0,0.5);
+          }
+          @media screen and (max-width: 480px) {
+            font-size: 1.2rem;
+            .pdpPriceOld{
+              padding-left: 0.8rem !important;
+            }
+          }
+        }
+        .pdpName{
+          font-size: 1.4rem;
+          font-weight: bold;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+        }
+        .pdpCategoriesHeading{
+          letter-spacing: 0.07rem;
+        }
+        .pdpProdImg{
+          img{
+            height: 40rem;
+            max-height: 600px;
+            width: 100%;
+            border-top-left-radius: calc(.25rem - 1px);
+            border-top-right-radius: calc(.25rem - 1px);
+          }
+          @media screen and (max-width: 480px) {
+            margin-bottom: 1rem;
+            img{
+              height: 14rem;
+            }
+          }
+        }
+        .pdpSelectSize{
+          span{
+            margin-right: 1rem;
+            padding: 0.5rem 0.88rem;
+            cursor: pointer;
+            background: map-get($colors, oBlack);
+            color:map-get($colors, abWhite);
+            box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.2)
+          }
+        }
+        .pdpProdColor{
+          background-color: orange;
+          width: 30px;
+          height: 30px;
+        }
+        .pdpBestOffers{
+          list-style: none;
+          li{
+            svg{
+              color:map-get($colors, abRed);
+              font-size: .8rem;
+            }
+          }
+        }
+        .pdpCartWishList{
+          button{
+            padding: .7rem 4rem;
+          }
+          .pdpAddToCartBtn{
+            button{
+              background: map-get($colors, oBlack)
+            }
+          }
+          .pdpAddToWishListBtn{
+            button{
+              background: map-get($colors, oWhite);
+              color:map-get($colors, oBlack);
+              border:1px solid rgba(0, 0, 0, 0.2);
+            }
+          }
+          @media screen and (max-width: 480px) {
+            button{width: 100%; margin-bottom: 1rem}
+            .pdpAddToWishListBtn{padding-left: 0rem !important;}
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 480px) {
+      padding: 1rem !important;
+    }
+  }
